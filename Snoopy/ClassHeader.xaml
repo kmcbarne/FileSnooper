@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Snoopy.ClassHeader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Snoopy"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="300" Background="LightBlue">
+    <Border x:Name="classEntry" BorderThickness="3,3,0,0" BorderBrush="#49FFFFFF">
+        <Border BorderThickness="0,0,3,3" BorderBrush="#49000000">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock Text="Class Name: " FontWeight="Bold" Grid.Row="0" />
+                <TextBlock Text="Namespace: " FontWeight="Bold" Grid.Row="1" />
+                <TextBlock Text="Full Name: " FontWeight="Bold" Grid.Row="2" />
+                <TextBlock x:Name="className" FontWeight="Bold" Grid.Column="2" Grid.Row="0" Text="{Binding ClassName}" Foreground="Blue" />
+                <TextBlock x:Name="nameSpace" FontWeight="Bold" Grid.Column="2" Grid.Row="1" Text="{Binding NameSpace}" Foreground="Blue" />
+                <TextBlock x:Name="fullName" FontWeight="Bold" Grid.Column="2" Grid.Row="2" Text="{Binding FullName}" Foreground="Blue" />
+            </Grid>
+        </Border>
+    </Border>
+</UserControl>
